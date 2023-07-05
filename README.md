@@ -13,7 +13,7 @@ Such splits can be created for any dataset automatically, complementing the data
 ## Data
 The bias-amplified splits created in the paper (for MultiNLI, Adversarial NLI, WANLI and QQP) are available [here](https://huggingface.co/bias-amplified-splits).
 
-
+## Code
 Code for creating bias-amplified splits for other datasets coming soon ⏰.
 In the meantime, please feel free to contact Yuval Reif at yuval.reif@mail.huji.ac.il.
 
