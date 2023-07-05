@@ -11,7 +11,19 @@ This framework is defined by a bias-amplified training set and a hard, anti-bias
 Such splits can be created for any dataset automatically, complementing the dataset's main training and test splits with challenging evaluation settings to promote more robust methods.
 
 ## Data
-The bias-amplified splits created in the paper (for MultiNLI, Adversarial NLI, WANLI and QQP) are available [here](https://huggingface.co/bias-amplified-splits).
+The bias-amplified splits created in the paper (for MultiNLI, Adversarial NLI, WANLI and QQP) are available at the [HF hub](https://huggingface.co/bias-amplified-splits).
+
+Example for loading the data:
+```
+from datasets import load_dataset
+
+# choose which bias detection method to use for the bias-amplified splits: either "minority_examples" or "partial_input"
+dataset = load_dataset("bias-amplified-splits/wanli", "minority_examples")
+
+# use the biased training split and anti-biased test split
+train_dataset = dataset['train.biased']
+eval_dataset = dataset['test.anti_biased']
+```
 
 ## Code
 Code for creating bias-amplified splits for other datasets coming soon ⏰.
